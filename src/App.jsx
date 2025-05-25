@@ -13,13 +13,15 @@ function App() {
   }, []);
 
   const fetchAppointments = async () => {
-    try {
-      const res = await axios.get('https://follow-up-reminder-system-backend.onrender.com/');
-      setAppointments(res.data);
-    } catch (error) {
-      console.error('Error fetching appointments:', error);
-    }
-  };
+  try {
+    const res = await axios.get('https://follow-up-reminder-system-backend.onrender.com/');
+    console.log('Fetched appointments:', res.data); // 👈 This line
+    setAppointments(res.data);
+  } catch (error) {
+    console.error('Error fetching appointments:', error);
+  }
+};
+
 
   // Handle form submit
   const handleSubmit = async (e) => {
