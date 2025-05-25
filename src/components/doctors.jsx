@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Boreh from '../assets/DR.Boreh.jpg';
+import Boreh from '../assets/Muchiri.jpg';
 import Muchiri from '../assets/Muchiri.jpg';
 import Lagat from '../assets/Dr.Lagat.jpg';
 import Joyce from '../assets/joyce.jpg';
