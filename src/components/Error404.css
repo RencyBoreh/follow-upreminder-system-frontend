@@ -1,0 +1,37 @@
+.error-page {
+  text-align: center;
+  padding: 50px;
+}
+
+.error-title {
+  font-size: 100px;
+  animation: shake 0.5s infinite;
+}
+
+.error-message {
+  font-size: 24px;
+}
+
+.error-animation {
+  margin: 20px 0;
+  animation: spin 2s infinite linear;
+}
+
+
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
