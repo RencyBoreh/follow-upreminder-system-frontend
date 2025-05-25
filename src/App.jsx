@@ -102,13 +102,17 @@ function App() {
     <div className="container-fluid p-3 col-lg-9 col-md-12 col-sm-12 rounded-4 shadow">
     <h3 className='text-center'>Appointments</h3>
    <ul className="list-group">
-  {appointments.length === 0 && <li className="list-group-item">No appointments yet</li>}
-  {appointments.map((appt, i) => (
-    <li className="list-group-item" key={i}>
-      {appt.patient_name} with Dr. {appt.doctor_name} at {new Date(appt.appointment_date).toLocaleString()} — Phone: {appt.phone_number}
-    </li>
-  ))}
+  {Array.isArray(appointments) ? (
+    appointments.map((appt, i) => (
+      <li className="list-group-item" key={i}>
+        {appt.patient_name} with Dr. {appt.doctor_name} at {new Date(appt.appointment_date).toLocaleString()} — Phone: {appt.phone_number}
+      </li>
+    ))
+  ) : (
+    <li className="list-group-item text-danger">Error loading appointments</li>
+  )}
 </ul>
+
 </div>
 </div>
     </div>
